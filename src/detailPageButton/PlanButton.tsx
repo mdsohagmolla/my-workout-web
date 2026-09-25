@@ -12,12 +12,20 @@ const  {plan, setPlan} = useContext(workoutContext)
 
 
 
-const handlePlan =()=>{
-    setPlan([...plan, data])
-    toast.success(`You have added ${data.name} to your plan`)
-    
+const handlePlan = () => {
+    // Check if workout already exists
+    const alreadyAdded = plan.some((item) => item.id === data.id);
 
-}
+    if (alreadyAdded) {
+      toast.info(`${data.name} is already in your plan`);
+      return;
+    }
+
+    // Add workout
+    setPlan([...plan, data]);
+
+    toast.success(`You have added ${data.name} to your plan`);
+  };
 
 
     return (

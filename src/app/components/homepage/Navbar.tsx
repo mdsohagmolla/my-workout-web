@@ -1,15 +1,20 @@
-import React from 'react';
+'use client'
+
+import React, { use } from 'react';
 import logo from '@/app/asset/logo.png'
 import Image from 'next/image';
 import Link from 'next/link';
 import Planbutton from '../workoutDetails/Planbutton';
 import Savedbutton from '../workoutDetails/Savedbutton';
+import { usePathname } from 'next/navigation';
 
 
 const Navbar = () => {
+
+    const pathname = usePathname()
     const links = <>
-        <li><Link href={'/workout'} className='text-[#9CA3AF]'>Workout</Link></li>
-        <li><Link href={'/myplan'} className='text-[#9CA3AF]'>My Plan</Link></li>
+        <li><Link href={'/'} className={`rounded-full px-7 py-3 text-base font-medium transition-all duration-200 ${pathname==="/"?"bg-[#172711] text-[#b6ff00]":"text-[#9CA3AF] hover:text-white"}`}>Workout</Link></li>
+        <li><Link href={'/myplan'} className={`rounded-full px-7 py-3 text-base font-medium transition-all duration-200 ${pathname==="/myplan"?"bg-[#172711] text-[#b6ff00]":"text-[#9CA3AF] hover:text-white"}`}>My Plan</Link></li>
         
 
 

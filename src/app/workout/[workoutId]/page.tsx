@@ -36,7 +36,7 @@ const WorkoutDetails = async ({ params }: workoutDetailpage) => {
             alt={data.name}
             width={600}
             height={700}
-            className="h-full min-h-[500px] w-full object-cover"
+            className="h-full min-h-125 w-full object-cover"
           />
         </div>
 
