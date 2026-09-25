@@ -31,4 +31,4 @@ FitLog is a modern workout library web application where users can explore worko
 Clone the repository:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone YOUR_GITHUB_REPOSITORY_URL https://github.com/mdsohagmolla/my-workout-web.git
